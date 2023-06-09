@@ -10,7 +10,8 @@
     "test:watch": "vitest watch",
     "commit": "git add -A; timestamp=$(date \"+%c\") && git commit -m \"TCR @ $timestamp\";",
     "revert": "git checkout -- $(git diff --name-only --diff-filter=d | grep '^src/' | grep -v '\\.test\\.ts$')",
-    "tcr": "npm test && npm run commit || npm run revert"
+    "tcr": "npm test && npm run commit || npm run revert",
+    "tcr:push": "npm test && npm run commit && git push || npm run revert"
   },
   "author": {
     "name": "Steven de Jong",
