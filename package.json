@@ -4,12 +4,22 @@
   "description": "![Awesome Codium Extension](extension-screenshot.png)",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tsc",
+    "watch": "tsc -w",
+    "test": "vitest",
+    "commit": "git add -A; timestamp=$(date \"+%c\") && git commit -m \"TCR @ $timestamp\";",
+    "revert": "git reset --hard",
+    "tcr": "npm test && npm run commit || npm run revert"
   },
   "author": {
     "name": "Steven de Jong",
     "email": "steven@steven-dejong.nl",
     "url": "https://www.madebysteven.nl"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^5.1.3",
+    "vitest": "^0.32.0",
+    "vscode": "^1.1.37"
+  }
 }
