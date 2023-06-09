@@ -1,0 +1,15 @@
+{
+  "name": "awesome-codium-extension",
+  "version": "1.0.0",
+  "description": "![Awesome Codium Extension](extension-screenshot.png)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": {
+    "name": "Steven de Jong",
+    "email": "steven@steven-dejong.nl",
+    "url": "https://www.madebysteven.nl"
+  },
+  "license": "MIT"
+}
