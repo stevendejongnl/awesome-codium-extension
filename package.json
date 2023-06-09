@@ -9,7 +9,7 @@
     "test": "vitest run",
     "test:watch": "vitest watch",
     "commit": "git add -A; timestamp=$(date \"+%c\") && git commit -m \"TCR @ $timestamp\";",
-    "revert": "git reset --hard $(git diff --name-only --diff-filter=d | grep '^src/' | grep -v '\\.test\\.ts$')",
+    "revert": "git checkout -- $(git diff --name-only --diff-filter=d | grep '^src/' | grep -v '\\.test\\.ts$')",
     "tcr": "npm test && npm run commit || npm run revert"
   },
   "author": {
